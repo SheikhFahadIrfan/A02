@@ -1,78 +1,79 @@
-# A02
-# A02: Git and GitHub Tutorial
+# A02: GitHub Tutorial and Glossary
 
-## Part 1: Directions on Using WebStorm
+## Part 1: Directions on Using Git, WebStorm, and GitHub
 
-### Step 1: Download and Install WebStorm
-   - Visit [JetBrains WebStorm Download Page](https://www.jetbrains.com/webstorm/download/).
-   - Select your operating system and click **Download**.
-   - Once downloaded, follow the on-screen instructions to install WebStorm.
+### 1. **Installing WebStorm**
+   - Download WebStorm from the official JetBrains website: [Download WebStorm](https://www.jetbrains.com/webstorm/download/).
+   - Once downloaded, follow the installation instructions for your operating system.
+   - Open WebStorm and sign in using your JetBrains account, or create one if you don’t already have an account.
 
-### Step 2: Open WebStorm and Configure Git
-   - Launch WebStorm.
-   - Go to **File** > **Settings** (or **Preferences** on macOS).
-   - Under **Version Control**, select **Git**.
-   - Ensure the Git executable path is correct (WebStorm often detects this automatically). You can download Git from [here](https://git-scm.com/downloads) if it is not already installed.
+### 2. **Setting Up Git in WebStorm**
+   - Open WebStorm.
+   - Go to `File -> Settings -> Version Control -> Git` and make sure WebStorm is linked to your local **Git** installation.
+   - If you don't have **Git** installed, download it from [Git's official website](https://git-scm.com/downloads).
+   - After installing **Git**, restart WebStorm and confirm that the path to the Git executable is correct in the settings.
 
-### Step 3: Create a New Project and Initialize a Repository
-   - Open WebStorm and select **Create New Project**.
-   - Name your project and choose the folder where it will be saved.
-   - Right-click in the Project Explorer and select **Git** > **Initialize Git Repository**. This creates a local **Repository** for tracking your project.
+### 3. **Creating a GitHub Repository**
+   - Go to [GitHub](https://github.com) and sign in, or create a GitHub account if you don't have one.
+   - After logging in, click on "New" to create a new **repository**.
+   - Name the repository **A02** (case-sensitive).
+   - Add a description if you like, choose whether the repository is public or private, and initialize the repository with a `README.md`.
+   - Click **Create repository**.
 
-### Step 4: Clone a GitHub Repository in WebStorm
-   - In WebStorm, go to **VCS** > **Get from Version Control**.
-   - Paste your GitHub **Repository** URL: `https://github.com/yourUCID/A02`.
-   - Click **Clone** to download the repository to your local machine.
+### 4. **Cloning the GitHub Repository in WebStorm**
+   - Once your repository is created, click the green “Code” button in GitHub, and copy the repository URL.
+   - In WebStorm, go to `VCS -> Git -> Clone`.
+   - Paste the copied GitHub repository URL and click "Clone."
+   - This will download the repository to your local machine.
 
-### Step 5: Make Changes and **Commit** in WebStorm
-   - Open the `README.md` file in WebStorm and make your changes.
-   - Once you’re done, go to **VCS** > **Commit** or click the commit icon at the top.
-   - Write a clear **Commit** message describing your changes (e.g., "Task: Created README file").
-   - Click **Commit** to save the changes to your local **Repository**.
+### 5. **Creating Files and Editing in WebStorm**
+   - In the cloned project, right-click the project folder and choose `New -> File` to create a new file.
+   - For example, create a file named `index.html` to begin adding your web content.
+   - Make changes to your files as needed.
 
-### Step 6: **Push** Changes to GitHub
-   - After committing, click on **VCS** > **Git** > **Push** to send the changes from your local **Repository** to the remote **Repository** on **GitHub**.
-   - Verify the push and check your GitHub repository to ensure the changes were applied.
+### 6. **Committing Changes in WebStorm**
+   - After making edits to your files, click on the `VCS` menu and select `Commit`.
+   - Write a clear **commit** message, such as `Feature: Added new file index.html`, and click "Commit".
+   - Committing the changes saves a snapshot of your work locally.
 
-### Step 7: Pull and Fetch Changes from the Remote **Repository**
-   - If there are updates on GitHub, you can download them to your local **Repository** using the **Pull** or **Fetch** commands.
-   - Use **Fetch** to see any changes without merging them.
-   - Use **Pull** to download and automatically merge changes.
+### 7. **Pushing Changes to GitHub**
+   - After committing, push your changes to the remote **repository** by clicking `VCS -> Git -> Push`.
+   - This will upload the local changes to your GitHub repository.
 
-### Step 8: Merging and Handling **Merge Conflicts**
-   - When working on multiple **Branches**, you may need to **Merge** changes.
-   - Go to **VCS** > **Git** > **Merge** to combine changes from one **Branch** into another.
-   - If there are conflicting changes, you will encounter a **Merge Conflict**, which needs to be manually resolved before proceeding.
+### 8. **Creating and Switching Branches**
+   - To create a new **branch**, go to `VCS -> Git -> Branches -> New Branch` in WebStorm.
+   - Name the branch and switch to it.
+   - Make changes to your project in this branch.
 
----
+### 9. **Merging Branches and Resolving Merge Conflicts**
+   - After making changes in your branch, you can **merge** it with the main branch by going to `VCS -> Git -> Branches -> Merge`.
+   - If there are any **merge conflicts**, WebStorm will highlight them, and you can choose which changes to keep.
+   - Once resolved, complete the **merge**.
 
-## Part 2: Glossary of Git Terms
+### 10. **Pulling and Fetching Changes**
+   - If changes were made by others in the **remote** repository, you can **pull** them into your local repository by going to `VCS -> Git -> Pull`.
+   - If you only want to see changes without applying them, use the **fetch** command instead: `VCS -> Git -> Fetch`.
+   - This keeps your local repository up to date with the remote one.
+   - Be cautious when using `Pull with Force`, as it can overwrite your local changes.
 
-- **Branch**: A separate version of the **Repository**, allowing independent development without affecting the main codebase.
-- **Clone**: The process of copying a remote **Repository** from **GitHub** to your local machine.
-- **Commit**: A record of changes made to files in a **Repository**, similar to saving your progress.
-- **Fetch**: Downloads updates from the remote **Repository** without merging them into your local project.
-- **GIT**: A version control system used to track code changes and collaborate with others.
-- **GitHub**: A web-based platform for hosting **GIT** repositories and collaborating with other developers.
-- **Merge**: The process of combining changes from one **Branch** into another.
-- **Merge Conflict**: A conflict that occurs when changes from two **Branches** conflict with each other, requiring manual resolution.
-- **Push**: Uploading your local **Commits** to the remote **Repository** on **GitHub**.
-- **Pull**: Downloading changes from the remote **Repository** and merging them into your local code.
-- **Remote**: The online version of your **Repository** stored on **GitHub** or another hosting platform.
-- **Repository**: A project storage location where files, **Commits**, and histories are tracked in **GIT**.
+## Part 2: Glossary of Terms
 
----
+- **Branch**: A parallel version of a repository. It allows for changes to be made independently before merging into the main project.
+- **Clone**: Creating a copy of a remote repository on your local machine.
+- **Commit**: A snapshot of the changes made to the project files, saved in the local repository.
+- **Fetch**: Downloading commits, branches, and files from a remote repository without merging them.
+- **GIT**: A distributed version control system used for tracking changes in source code during software development.
+- **GitHub**: A web-based platform that uses Git for version control and offers collaboration tools for developers.
+- **Merge**: Combining changes from different branches into one branch.
+- **Merge Conflict**: A situation where Git cannot automatically merge changes because of conflicting alterations in the same file.
+- **Push**: Uploading local repository changes to a remote repository.
+- **Pull**: Downloading changes from a remote repository to your local repository and applying them.
+- **Remote**: The version of the repository hosted on a server, such as GitHub, that developers collaborate on.
+- **Repository**: A project or folder that contains all project files, including the history of changes.
 
-## Commit Messages Examples
+## References
+1. [GitHub Documentation](https://docs.github.com/en)
+2. [JetBrains WebStorm Documentation](https://www.jetbrains.com/webstorm/documentation/)
+3. Git PowerPoint slides from IS117 Lecture
+4. [Git Glossary](https://git-scm.com/docs/gitglossary)
 
-- **Task**: Create Repository
-- **Feature**: Added workflow for using GitHub
-- **Fix**: Changed `README.md` for definition of terms
-
----
-
-## References:
-- [JetBrains WebStorm Documentation](https://www.jetbrains.com/webstorm/documentation/)
-- [GitHub Documentation](https://docs.github.com/)
-- [Git Pro Book](https://git-scm.com/book/en/v2)
-- [Git Glossary](https://git-scm.com/docs/gitglossary)
